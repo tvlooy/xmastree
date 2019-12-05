@@ -38,6 +38,7 @@ tput cup 42 $(($l+9)); echo "NetApp"
 
 # Draw rack
 tput setaf 4; tput setab 4
+
 tput cup  3 $(($l+5)); echo "+-----------------------------------+"
 tput cup  4 $(($l+5)); echo "| --------------------------------- |"
 tput cup  5 $(($l+5)); echo "||"
@@ -118,7 +119,7 @@ echo 'vanwege het Intracto SRE team'
 # Draw blinkenlights
 tput setab 0
 
-colors=(3 3 3 3 3 3 1 2 2 2 2 2 2 2 2)
+colors=(1 3 2 2)
 
 function led() {
     color=${colors[$RANDOM % ${#colors[@]}]}
